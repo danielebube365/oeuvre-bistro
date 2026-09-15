@@ -5,7 +5,8 @@
    themselves in. Rooms are numbered like a real exhibition.
    Palette: gallery wall / ink / crimson (tangerine lives only
    inside the paint gradient, as it does in the logo ring).
-   Type: Bodoni Moda + Jost.
+   Type: Newsreader + Jost. (Bodoni Moda was dropped: its hairlines
+   vanished at display sizes and hurt readability.)
    ============================================================ */
 
 :root{
@@ -21,7 +22,9 @@
 
   --wrap:1200px;
   --ease:cubic-bezier(.2,.8,.25,1);
-  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --ease-silk:cubic-bezier(.16,1,.3,1);   /* long, soft landing */
+  --ease-pendulum:cubic-bezier(.45,0,.55,1); /* eases into and out of every turn */
   --f-text:"Jost","Futura","Century Gothic",-apple-system,"Segoe UI",sans-serif;
 }
 
@@ -39,7 +42,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 figure{margin:0;} /* browsers add 40px side margins to <figure> by default */
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 :focus-visible{outline:2px solid var(--crimson);outline-offset:4px;}
-h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:500;line-height:1.02;letter-spacing:-.01em;}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:500;line-height:1.04;letter-spacing:-.02em;}
 h1 em,h2 em{font-style:italic;color:var(--crimson);font-weight:400;}
 
 .wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto;}
@@ -53,11 +56,11 @@ h1 em,h2 em{font-style:italic;color:var(--crimson);font-weight:400;}
 .brush path{
   fill:none;stroke:url(#paint);stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
-  transition:stroke-dashoffset 1.5s var(--ease) .5s;
+  transition:stroke-dashoffset 2.1s cubic-bezier(.65,0,.35,1) .6s; /* slow start and finish, like a hand drawing it */
 }
 .in .brush path,.brush.in path{stroke-dashoffset:0;}
 .circled{position:relative;display:inline-block;font-style:italic;color:var(--crimson);font-weight:400;}
-.brush--ring{left:-24%;right:-26%;top:-12%;bottom:-18%;width:150%;height:130%;}
+.brush--ring{left:-14%;top:-10%;width:128%;height:124%;}
 .brush--ring path{stroke-width:4.5;}
 .underlined{position:relative;white-space:nowrap;}
 .brush--under{left:-2%;bottom:-.28em;width:104%;height:.45em;}
@@ -149,7 +152,7 @@ h1 em,h2 em{font-style:italic;color:var(--crimson);font-weight:400;}
 /* ── hero ────────────────────────────────────── */
 .hero{padding:44px 0 72px;}
 .hero__grid{display:grid;gap:40px;align-items:center;}
-.hero__title{font-size:clamp(3.1rem,13.5vw,7rem);font-weight:500;}
+.hero__title{font-size:clamp(2.8rem,12vw,5.4rem);font-weight:500;}
 .hero__title .line{display:block;}
 .hero__lede{margin-top:30px;max-width:46ch;color:var(--ink-soft);font-size:1.08rem;}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;}
@@ -295,15 +298,24 @@ h1 em,h2 em{font-style:italic;color:var(--crimson);font-weight:400;}
 
 /* ── reveals (use the individual translate/rotate properties so they
       never overwrite an element's own transform) ───────────────── */
-.reveal{opacity:0;translate:0 22px;transition:opacity .9s var(--ease),translate .9s var(--ease);}
+.reveal{opacity:0;translate:0 16px;transition:opacity 1.3s var(--ease-silk),translate 1.6s var(--ease-silk);}
 .reveal.in{opacity:1;translate:0 0;}
-.hang{opacity:0;translate:0 -18px;transition:opacity .8s var(--ease),translate .8s var(--ease);}
-.hang.in{opacity:1;translate:0 0;animation:swing 2.2s var(--ease) .15s both;}
-@keyframes swing{0%{rotate:3.2deg;}30%{rotate:-2deg;}55%{rotate:1deg;}78%{rotate:-.4deg;}100%{rotate:0deg;}}
-.hang .frame img,.hang .frame video{scale:1.06;transition:scale 1.6s var(--ease) .1s;}
+.hang{opacity:0;translate:0 -10px;transition:opacity 1.4s var(--ease-silk),translate 1.8s var(--ease-silk);}
+.hang.in{opacity:1;translate:0 0;animation:swing 3.6s .1s both;}
+/* a damped pendulum: each swing is smaller, and every turn eases in and out */
+@keyframes swing{
+  0%  {rotate:1.8deg;  animation-timing-function:var(--ease-pendulum);}
+  21% {rotate:-1.15deg;animation-timing-function:var(--ease-pendulum);}
+  41% {rotate:.7deg;   animation-timing-function:var(--ease-pendulum);}
+  59% {rotate:-.38deg; animation-timing-function:var(--ease-pendulum);}
+  75% {rotate:.17deg;  animation-timing-function:var(--ease-pendulum);}
+  89% {rotate:-.05deg; animation-timing-function:var(--ease-pendulum);}
+  100%{rotate:0deg;}
+}
+.hang .frame img,.hang .frame video{scale:1.04;transition:scale 2.4s var(--ease-silk) .15s;}
 .hang.in .frame img,.hang.in .frame video{scale:1;}
 .frame{overflow:hidden;}
-.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}.d5{transition-delay:.5s;}
+.d1{transition-delay:.12s;}.d2{transition-delay:.24s;}.d3{transition-delay:.36s;}.d4{transition-delay:.48s;}.d5{transition-delay:.6s;}
 
 /* ── breakpoints ─────────────────────────────── */
 @media (min-width:720px){
