@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oeuvre Bistro · Every plate, a work of art · Ogudu, Lagos</title>
+<meta name="description" content="Oeuvre Bistro, Afro-fusion dining on the 3rd floor of Ogudu Mall, Lagos. Open daily 9am to 10pm. Dine in, takeout and delivery." />
+<link rel="icon" href="assets/logo.jpg" />
+<meta property="og:title" content="Oeuvre Bistro · Every plate, a work of art" />
+<meta property="og:description" content="Afro-fusion dining in Ogudu, Lagos. Open daily 9am to 10pm." />
+<meta property="og:image" content="assets/ribeye.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300..600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="paint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B02E38" />
+      <stop offset=".55" stop-color="#C9433A" />
+      <stop offset="1" stop-color="#EE8B33" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ─────────── NAV ─────────── -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Oeuvre Bistro home">
+    <img src="assets/logo.jpg" alt="" width="52" height="52" />
+    <span class="brand__word">Oeuvre <em>Bistro</em></span>
+  </a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#room-1">The Exhibition</a>
+    <a href="#bar">The Bar</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn--sm nav__cta" href="tel:+2348181887479">Reserve</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  <div class="drawer">
+    <a href="#room-1">The Exhibition</a>
+    <a href="#bar">The Bar</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#visit">Visit</a>
+    <a class="drawer__cta" href="tel:+2348181887479">Reserve a table</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ─────────── HERO · OPENING NIGHT ─────────── -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">Now showing · Ogudu Mall, 3rd floor</p>
+      <h1 class="hero__title">
+        <span class="line reveal d1">Every plate,</span>
+        <span class="line reveal d2">a work of
+          <span class="circled">art.
+            <svg class="brush brush--ring" viewBox="0 0 300 130" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M246 24 C 206 6 92 8 42 30 C 4 48 10 94 64 110 C 128 128 236 118 272 90 C 302 66 282 28 214 14 C 176 6 136 8 100 14" /></svg>
+          </span>
+        </span>
+      </h1>
+      <p class="hero__lede reveal d3">Afro-fusion plates, a proper bar and a room dressed like a gallery. Oeuvre is French for a work of art, and that is how every dish leaves our kitchen.</p>
+      <div class="hero__cta reveal d4">
+        <a class="btn" href="tel:+2348181887479">Reserve a table</a>
+        <a class="btn btn--ghost" href="#catalogue">View the catalogue</a>
+      </div>
+      <dl class="hero__facts reveal d5">
+        <div><dt>Open</dt><dd>Daily, 9am to 10pm</dd></div>
+        <div><dt>Serving</dt><dd>Dine in · Takeout · Delivery</dd></div>
+      </dl>
+    </div>
+
+    <figure class="hero__piece hang" style="--drop:64px">
+      <div class="frame frame--portrait">
+        <video id="heroVideo" poster="assets/room-poster.jpg" preload="metadata" muted loop playsinline autoplay disablepictureinpicture>
+          <source src="assets/room.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <figcaption class="placard">
+        <span class="placard__no">No. 00</span>
+        <span class="placard__title">The Room</span>
+        <span class="placard__medium">Hand-painted branches, butterfly light, gold frames</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─────────── WALL TEXT ─────────── -->
+<section class="walltext">
+  <div class="wrap walltext__inner">
+    <p class="walltext__word reveal">oeuvre</p>
+    <p class="walltext__phon reveal d1">/ˈœː.vʁə/ &nbsp; noun, French</p>
+    <ol class="walltext__defs">
+      <li class="reveal d2">A work of art.</li>
+      <li class="reveal d3">The complete body of an artist&rsquo;s work.</li>
+      <li class="reveal d4">A bistro in Ogudu where dinner is treated as both.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ─────────── ROOM I · SIGNATURE PLATES ─────────── -->
+<section class="room" id="room-1">
+  <div class="wrap">
+    <header class="room__sign">
+      <span class="room__num reveal">Room I</span>
+      <h2 class="reveal d1">The Signature <em>Plates</em></h2>
+      <p class="reveal d2">Four pieces from the permanent collection. Each one is plated to be looked at before it is eaten.</p>
+    </header>
+
+    <div class="salon">
+      <span class="salon__rail" aria-hidden="true"></span>
+
+      <figure class="piece hang" style="--drop:40px">
+        <div class="frame"><img src="assets/ribeye.jpg" alt="Grilled rib eye steak in peppercorn sauce with yam fries" width="1110" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 01</span>
+          <span class="placard__title">Rib Eye Steak</span>
+          <span class="placard__medium">Grilled rib eye, peppercorn sauce</span>
+          <span class="placard__price">₦48,500</span>
+        </figcaption>
+      </figure>
+
+      <figure class="piece hang" style="--drop:118px">
+        <div class="frame"><img src="assets/seafood-boil.jpg" alt="Seafood boil with prawns, crab and sweet corn in tomato broth" width="1003" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 02</span>
+          <span class="placard__title">Seafood Boil</span>
+          <span class="placard__medium">Prawns, calamari, crab clusters, fish, sweet corn, tomato broth</span>
+          <span class="placard__price">₦37,500</span>
+        </figcaption>
+      </figure>
+
+      <figure class="piece hang" style="--drop:64px">
+        <div class="frame"><img src="assets/salmon.jpg" alt="Pan-seared salmon fillet with rice and garden vegetables" width="1011" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 03</span>
+          <span class="placard__title">Salmon Fish</span>
+          <span class="placard__medium">Pan-seared salmon, garden vegetables</span>
+          <span class="placard__price">₦36,000</span>
+        </figcaption>
+      </figure>
+
+      <figure class="piece hang" style="--drop:140px">
+        <div class="frame"><img src="assets/fish-platter.jpg" alt="Grilled whole fish on a board with plantain, yam fries, coleslaw and dips" width="975" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 04</span>
+          <span class="placard__title">Grilled Fish Board</span>
+          <span class="placard__medium">Whole grilled fish, plantain, yam fries, slaw, three dips</span>
+          <span class="placard__price placard__price--ask">Ask your server</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="room__cta reveal">
+      <a class="btn" href="tel:+2348181887479">Book a table for tonight</a>
+      <a class="link" href="#catalogue">See the full catalogue</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── THEIR OWN LINE ─────────── -->
+<section class="quote">
+  <div class="wrap">
+    <blockquote class="reveal">
+      <p>&ldquo;Good food is the foundation of <span class="underlined">genuine happiness.<svg class="brush brush--under" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 16 C 60 6 120 20 170 12 C 214 5 258 10 296 8" /></svg></span>&rdquo;</p>
+      <cite>Printed on the last page of our menu</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ─────────── ROOM II · MORNINGS ─────────── -->
+<section class="room room--mornings" id="room-2">
+  <div class="wrap mornings">
+    <div class="mornings__copy">
+      <span class="room__num reveal">Room II</span>
+      <h2 class="reveal d1">Morning <em>Light</em></h2>
+      <p class="reveal d2">The doors open at nine. Fluffy pancakes, full English and American breakfasts, and waffles with crispy chicken, served until you are ready for lunch.</p>
+      <ul class="catalogue-mini reveal d3">
+        <li><span>Full American Breakfast</span><b>₦14,200</b></li>
+        <li><span>Full English Breakfast</span><b>₦14,000</b></li>
+        <li><span>Waffles and Chicken</span><b>₦14,000</b></li>
+        <li><span>Breakfast Platter, serves 6 to 7</span><b>₦80,000</b></li>
+      </ul>
+    </div>
+    <div class="mornings__wall">
+      <figure class="piece hang" style="--drop:30px">
+        <div class="frame"><img src="assets/breakfast.jpg" alt="Full American breakfast with pancake, scrambled eggs, baked beans, sausages, grilled tomatoes and syrup" width="1300" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 05</span>
+          <span class="placard__title">Full American Breakfast</span>
+          <span class="placard__price">₦14,200</span>
+        </figcaption>
+      </figure>
+      <figure class="piece hang" style="--drop:96px">
+        <div class="frame"><img src="assets/waffles.jpg" alt="Maple syrup pouring over waffles served with crispy chicken" width="1040" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 06</span>
+          <span class="placard__title">Waffles and Chicken</span>
+          <span class="placard__price">₦14,000</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── ROOM III · THE BAR (after dark) ─────────── -->
+<section class="bar" id="bar">
+  <div class="wrap">
+    <header class="room__sign room__sign--dark">
+      <span class="room__num reveal">Room III · After dark</span>
+      <h2 class="reveal d1">The <em>Bar</em></h2>
+      <p class="reveal d2">Classics shaken properly, house cocktails, shooters, and a mocktail list long enough that nobody at the table feels left out.</p>
+    </header>
+
+    <div class="bar__wall">
+      <figure class="piece piece--dark reveal">
+        <div class="frame"><img src="assets/drinks-bar.jpg" alt="Three cocktails on the marble bar, orange, blue and red" width="1008" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 07</span>
+          <span class="placard__title">The Counter</span>
+          <span class="placard__medium">Classics from ₦10,000</span>
+        </figcaption>
+      </figure>
+      <figure class="piece piece--dark piece--lift reveal d1">
+        <div class="frame"><img src="assets/drink-pink.jpg" alt="Pink sparkling mocktail with a strawberry and paper umbrella" width="975" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 08</span>
+          <span class="placard__title">Something Pink</span>
+          <span class="placard__medium">Mocktails from ₦7,000</span>
+        </figcaption>
+      </figure>
+      <figure class="piece piece--dark reveal d2">
+        <div class="frame"><img src="assets/drinks-pair.jpg" alt="Strawberry mojito and an orange cocktail on the bar" width="991" height="1300" loading="lazy" /></div>
+        <figcaption class="placard">
+          <span class="placard__no">No. 09</span>
+          <span class="placard__title">A Pair</span>
+          <span class="placard__medium">House cocktails from ₦10,000</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="bar__lists">
+      <div class="reveal"><h3>Classics</h3><p>Old Fashioned, Negroni, Margarita, Whiskey Sour, Moscow Mule, Cosmopolitan and more</p><b>₦10,000 to ₦11,000</b></div>
+      <div class="reveal d1"><h3>House cocktails</h3><p>Oeuvre Daiquiri, Strawberry Margarita, Irish Coconut, Dark &amp; Stormy</p><b>₦10,000 to ₦15,000</b></div>
+      <div class="reveal d2"><h3>Mocktails</h3><p>Mango Basil, Strawberry Kiss, Jamaican Punch, Virgin Oeuvre Daiquiri</p><b>From ₦6,500</b></div>
+      <div class="reveal d3"><h3>Barman&rsquo;s request</h3><p>Not on the list? Describe it and the bar will build it for you.</p><b>₦12,000</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── THE CATALOGUE (full menu) ─────────── -->
+<section class="catalogue" id="catalogue">
+  <div class="wrap">
+    <header class="room__sign">
+      <span class="room__num reveal">The Catalogue</span>
+      <h2 class="reveal d1">Every piece, <em>listed</em></h2>
+      <p class="reveal d2">Our full menu, from the first coffee at nine to the last shooter at ten.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Menu sections" id="tabs"></div>
+    <div class="lots" id="lots" aria-live="polite"></div>
+
+    <div class="catalogue__foot reveal">
+      <p>Prices in naira. Kindly let your server know about any allergies.</p>
+      <a class="btn" href="tel:+2348181887479">Reserve a table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── ROOM IV · THE SPACE ─────────── -->
+<section class="room room--space" id="space">
+  <div class="wrap space">
+    <figure class="piece hang space__piece" style="--drop:52px">
+      <div class="frame"><img src="assets/soup.jpg" alt="A table set with roses, a creamy soup with grilled bread and cocktails" width="1040" height="1300" loading="lazy" /></div>
+      <figcaption class="placard">
+        <span class="placard__no">No. 10</span>
+        <span class="placard__title">Table for Two</span>
+        <span class="placard__medium">Roses, candlelight optional</span>
+      </figcaption>
+    </figure>
+    <div class="space__copy">
+      <span class="room__num reveal">Room IV</span>
+      <h2 class="reveal d1">A room worth <em>dressing up</em> for</h2>
+      <p class="reveal d2">Branches painted across the walls, a chandelier of golden butterflies, floral velvet chairs and a floor of soft coloured tiles. Birthdays, first dates and long Sunday lunches all look good in here.</p>
+      <a class="btn btn--ghost reveal d3" href="tel:+2348181887479">Plan a celebration</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── VISIT ─────────── -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <header class="room__sign room__sign--center">
+      <span class="room__num reveal">Visitor information</span>
+      <h2 class="reveal d1">The exhibition is <em>open</em></h2>
+    </header>
+    <div class="visit__grid">
+      <div class="ticket reveal">
+        <span class="ticket__label">Gallery hours</span>
+        <p class="ticket__big">9am <span>to</span> 10pm</p>
+        <p>Monday to Sunday</p>
+        <span class="open-pill" id="openPill">Checking</span>
+      </div>
+      <div class="ticket reveal d1">
+        <span class="ticket__label">Location</span>
+        <p class="ticket__big">Ogudu Mall</p>
+        <p>3rd floor, Ogudu, Lagos</p>
+        <a class="link" href="https://maps.google.com/?q=Oeuvre+Bistro+Ogudu+Mall+Lagos" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="ticket reveal d2">
+        <span class="ticket__label">Reservations</span>
+        <p class="ticket__big">0818 188 7479</p>
+        <p>Dine in, takeout and delivery</p>
+        <a class="link" href="tel:+2348181887479">Call to book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="footer__logo"><img src="assets/logo.jpg" alt="Oeuvre Bistro" width="96" height="96" /></span>
+      <p>A change on your taste bud.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#room-1">The Exhibition</a>
+      <a href="#bar">The Bar</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="footer__contact">
+      <p>Ogudu Mall, 3rd floor<br />Ogudu, Lagos</p>
+      <a href="tel:+2348181887479">0818 188 7479</a>
+      <a href="https://instagram.com/oeuvrebistro" target="_blank" rel="noopener">@oeuvrebistro</a>
+    </div>
+  </div>
+  <div class="footer__base wrap">
+    <span>&copy; <span id="year">2026</span> Oeuvre Bistro</span>
+    <span>Open daily, 9am to 10pm</span>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+2348181887479" aria-label="Call Oeuvre Bistro to reserve">Reserve</a>
+
+<script src="script.js"></script>
+</body>
+</html>
